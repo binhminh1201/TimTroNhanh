@@ -63,8 +63,8 @@ const listingsData = [
   location: "Chùa Láng, Quận Đống Đa, Hà Nội",
   cityCode: "Hà Nội",
   priceRange: "3m-5m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/15/img-6001_1746776001.jpg",
-  detailsUrl: "chitiet-hanoi-dongda.html"
+  imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
+  detailsUrl: "details-6.html"
 },
 {
   id: 7,
@@ -75,7 +75,7 @@ const listingsData = [
   cityCode: "Hà Nội",
   priceRange: "7m-10m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/16/img-7001_1746776101.jpg",
-  detailsUrl: "chitiet-hanoi-haibatrung.html"
+  detailsUrl: "details-7.html"
 },
 {
   id: 8,
@@ -86,7 +86,7 @@ const listingsData = [
   cityCode: "Hà Nội",
   priceRange: "7m-10m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/17/img-8001_1746776201.jpg",
-  detailsUrl: "chitiet-hanoi-tayho.html"
+  detailsUrl: "details-8.html"
 },
 {
   id: 9,
@@ -97,7 +97,7 @@ const listingsData = [
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/18/img-9001_1746776301.jpg",
-  detailsUrl: "chitiet-tphcm-govap.html"
+  detailsUrl: "details-9.html"
 },
 {
   id: 10,
@@ -108,7 +108,7 @@ const listingsData = [
   cityCode: "Đà Nẵng",
   priceRange: "3m-5m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/19/img-1001_1746776401.jpg",
-  detailsUrl: "chitiet-danang-sontra.html"
+  detailsUrl: "details-10.html"
 }
 ];
 
