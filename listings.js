@@ -35,7 +35,7 @@ const listingsData = [
     {
         id: 4,
         title: "Studio cao cấp Cầu Giấy (HN)",
-        price: 5500000, 
+        price: 5500000,
         area: 35,
         location: "Cầu Giấy, Hà Nội",
         cityCode: "Hà Nội",
@@ -83,7 +83,7 @@ const listingsData = [
   area: 45,
   location: "Quảng An, Quận Tây Hồ, Hà Nội",
   cityCode: "Hà Nội",
-  priceRange: "7m-10m", 
+  priceRange: "7m-10m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
   detailsUrl: "details-8.html"
 },
@@ -127,7 +127,7 @@ function createListingCard(listing) {
     
     
     return `
-        <a href="${listing.detailsUrl}" class="block bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl">
+        <a href="${listing.detailsUrl}" class="block bg-white rounded-lg shadow-md overflow-hidden">
             <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
@@ -138,7 +138,6 @@ function createListingCard(listing) {
             </div>
         </a>
     `;
-  
 }
 
 
@@ -147,7 +146,7 @@ function renderListings() {
 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const urlCity = urlParams.get('city'); 
+    const urlCity = urlParams.get('city');
 
     if (urlCity && urlCity !== 'Chọn Tỉnh/Thành phố') { 
         currentListings = currentListings.filter(listing => listing.cityCode === urlCity);
@@ -162,7 +161,7 @@ function renderListings() {
          if (header && header.textContent !== 'Tìm Kiếm Phòng Trọ Phù Hợp') {
             header.textContent = 'Tất Cả Phòng Trọ';
         }
-  S}
+    }
 
 
   
@@ -174,7 +173,7 @@ function renderListings() {
     // SẮP XẾP DỮ LIỆU
     const sortValue = sortBy.value;
     if (sortValue === 'price-asc') {
-        currentListings.sort((a, b) => a.price - b.price); 
+        currentListings.sort((a, b) => a.price - b.price);
     } else if (sortValue === 'price-desc') {
         currentListings.sort((a, b) => b.price - a.price); 
     }
