@@ -32,7 +32,7 @@ body {
     color: var(--color-gray-700);
 }
 
-/* 3. Layout & Sizing */
+
 .container {
     width: 100%;
     margin-left: auto;
@@ -128,7 +128,7 @@ body {
 .bg-white { background-color: var(--color-white); }
 .bg-indigo-600 { background-color: var(--color-indigo-600); }
 .bg-yellow-400 { background-color: var(--color-yellow-400); } 
-/* Bổ sung Gradient Background */
+
 .bg-gradient-to-r { 
     background-image: linear-gradient(to right, var(--color-indigo-700), var(--color-purple-600)); 
 }
@@ -239,7 +239,6 @@ select.border {
     font-family: 'Pacifico', cursive; 
     
 }
-.hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); 
-  
+.hover\:scale-105:hover {
+    transform: scale(1.05);
 }
