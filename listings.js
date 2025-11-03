@@ -63,7 +63,7 @@ const listingsData = [
   cityCode: "Hà Nội",
   priceRange: "3m-5m",
   imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
-de  detailsUrl: "details-6.html"
+  detailsUrl: "details-6.html" // <- ĐÃ SỬA
 },
 {
   id: 7,
@@ -93,10 +93,10 @@ de  detailsUrl: "details-6.html"
   price: 2500000,
   area: 20,
   location: "Nguyễn Văn Lượng, Quận Gò Vấp, TP. HCM",
-  cityCode: "TP. Hồ Chí Minh",
+S  cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-g  detailsUrl: "details-9.html"
+  detailsUrl: "details-9.html" // <- ĐÃ SỬA
 },
 {
   id: 10,
@@ -125,9 +125,9 @@ function formatCurrency(amount) {
 function createListingCard(listing) {
     const formattedPrice = formatCurrency(listing.price);
     
-    
+    
     return `
-        <a href="${listing.detailsUrl}" class="block bg-white rounded-lg shadow overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl">
+        <a href="${listing.detailsUrl}" class="block bg-white rounded-lg shadow overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl">
             <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
@@ -138,7 +138,7 @@ function createListingCard(listing) {
             </div>
         </a>
     `;
-    
+    
 }
 
 
@@ -147,7 +147,7 @@ function renderListings() {
 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const urlCity = urlParams.get('city'); 
+    const urlCity = urlParams.get('city');s
 
     if (urlCity && urlCity !== 'Chọn Tỉnh/Thành phố') { 
         currentListings = currentListings.filter(listing => listing.cityCode === urlCity);
@@ -175,7 +175,7 @@ function renderListings() {
     // SẮP XẾP DỮ LIỆU
     const sortValue = sortBy.value;
     if (sortValue === 'price-asc') {
-        currentListings.sort((a, b) => a.price - b.price); 
+        currentListings.sort((a, b) => a.price - b.price);s
     } else if (sortValue === 'price-desc') {
         currentListings.sort((a, b) => b.price - a.price); 
     }
