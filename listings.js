@@ -74,7 +74,7 @@ const listingsData = [
   location: "KĐT Time City, Quận Hai Bà Trưng, Hà Nội",
   cityCode: "Hà Nội",
   priceRange: "7m-10m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/16/img-7001_1746776101.jpg",
+  imageUrl: "https://file4.batdongsan.com.vn/resize/1275x717/2025/08/05/20250805104920-a2c0_wm.jpg",
   detailsUrl: "details-7.html"
 },
 {
@@ -85,7 +85,7 @@ const listingsData = [
   location: "Quảng An, Quận Tây Hồ, Hà Nội",
   cityCode: "Hà Nội",
   priceRange: "7m-10m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/17/img-8001_1746776201.jpg",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
   detailsUrl: "details-8.html"
 },
 {
@@ -96,7 +96,7 @@ const listingsData = [
   location: "Nguyễn Văn Lượng, Quận Gò Vấp, TP. HCM",
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/18/img-9001_1746776301.jpg",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
   detailsUrl: "details-9.html"
 },
 {
@@ -107,7 +107,7 @@ const listingsData = [
   location: "An Hải Bắc, Quận Sơn Trà, Đà Nẵng",
   cityCode: "Đà Nẵng",
   priceRange: "3m-5m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/19/img-1001_1746776401.jpg",
+  imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/11/02/143/f4a9b13012104ac7a34744910101c41d.jpg",
   detailsUrl: "details-10.html"
 }
 ];
