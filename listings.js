@@ -63,7 +63,7 @@ const listingsData = [
   cityCode: "Hà Nội",
   priceRange: "3m-5m",
   imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
-  detailsUrl: "details-6.html"
+  detailsUrl: "details-6.html"
 },
 {
   id: 7,
@@ -96,7 +96,7 @@ const listingsData = [
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-  detailsUrl: "details-9.html"
+  detailsUrl: "details-9.html"
 },
 {
   id: 10,
@@ -134,11 +134,11 @@ function createListingCard(listing) {
                 <p class="text-red-600 font-bold mb-2">${formattedPrice} đ/tháng</p>
                 <p class="text-gray-600 text-sm mb-1">Diện tích: ${listing.area} m²</p>
                 <p class="text-gray-600 text-sm">Địa chỉ: ${listing.location}</p>
-                <span class.="inline-block mt-3 text-indigo-600 hover:underline text-sm">Xem chi tiết &rarr;</span>
+                <span class="inline-block mt-3 text-indigo-600 hover:underline text-sm">Xem chi tiết &rarr;</span>
             </div>
         </a>
     `;
-    
+    // Dòng trên: <span class="... thay vì <span class.=
 }
 
 
@@ -147,7 +147,7 @@ function renderListings() {
 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const urlCity = urlParams.get('city'); // <- ĐÃ SỬA, BỎ CHỮ 's'
+    const urlCity = urlParams.get('city');
 
     if (urlCity && urlCity !== 'Chọn Tỉnh/Thành phố') { 
         currentListings = currentListings.filter(listing => listing.cityCode === urlCity);
@@ -175,7 +175,7 @@ function renderListings() {
     // SẮP XẾP DỮ LIỆU
     const sortValue = sortBy.value;
     if (sortValue === 'price-asc') {
-        currentListings.sort((a, b) => a.price - b.price); // <- ĐÃ SỬA, BỎ CHỮ 's'
+        currentListings.sort((a, b) => a.price - b.price);
     } else if (sortValue === 'price-desc') {
         currentListings.sort((a, b) => b.price - a.price); 
     }
