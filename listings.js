@@ -1,8 +1,4 @@
-// =======================================================
-// listings.js - Xử lý Lọc, Sắp xếp và Lọc ban đầu theo URL
-// =======================================================
 
-// 1. Dữ liệu mẫu (Data) - Đã thêm trường cityCode để lọc chính xác hơn
 const listingsData = [
     {
         id: 1,
@@ -10,7 +6,7 @@ const listingsData = [
         price: 2500000, 
         area: 20,
         location: "Cầu Giấy, Hà Nội",
-        cityCode: "Hà Nội", // Sử dụng tên đầy đủ để khớp với giá trị <option> từ index.html
+        cityCode: "Hà Nội", 
         priceRange: "1m-3m",
         imageUrl: "https://congchungnguyenhue.com/Uploaded/Images/Original/2024/01/16/chinh-chu-cho-thue-phong-tro-khep-kin-tai-ngo-44-tran-thai-tong-cau-giay-phong-tang-2-va-tang-3-dep_1601213519.jpg",
         detailsUrl: "details-1.html"
@@ -58,20 +54,75 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/10/01/anh-pt5_1727753277.jpg",
         detailsUrl: "details-5.html"
-    }
+    },
+    {
+  id: 6,
+  title: "Studio full nội thất, mới tinh, Chùa Láng",
+  price: 4200000,
+  area: 30,
+  location: "Chùa Láng, Quận Đống Đa, Hà Nội",
+  cityCode: "Hà Nội",
+  priceRange: "3m-5m",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/15/img-6001_1746776001.jpg",
+  detailsUrl: "chitiet-hanoi-dongda.html"
+},
+{
+  id: 7,
+  title: "Cho thuê căn 1N1K Time City, full đồ đẹp",
+  price: 9500000,
+  area: 53,
+  location: "KĐT Time City, Quận Hai Bà Trưng, Hà Nội",
+  cityCode: "Hà Nội",
+  priceRange: "7m-10m",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/16/img-7001_1746776101.jpg",
+  detailsUrl: "chitiet-hanoi-haibatrung.html"
+},
+{
+  id: 8,
+  title: "Căn hộ dịch vụ 1PN Tây Hồ, view hồ",
+  price: 8000000,
+  area: 45,
+  location: "Quảng An, Quận Tây Hồ, Hà Nội",
+  cityCode: "Hà Nội",
+  priceRange: "7m-10m",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/17/img-8001_1746776201.jpg",
+  detailsUrl: "chitiet-hanoi-tayho.html"
+},
+{
+  id: 9,
+  title: "Phòng trọ SV Gò Vấp, có gác, gần ĐH Công Nghiệp",
+  price: 2500000,
+  area: 20,
+  location: "Nguyễn Văn Lượng, Quận Gò Vấp, TP. HCM",
+  cityCode: "TP. Hồ Chí Minh",
+  priceRange: "1m-3m",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/18/img-9001_1746776301.jpg",
+  detailsUrl: "chitiet-tphcm-govap.html"
+},
+{
+  id: 10,
+  title: "Căn hộ studio Sơn Trà, đi bộ ra biển",
+  price: 4500000,
+  area: 35,
+  location: "An Hải Bắc, Quận Sơn Trà, Đà Nẵng",
+  cityCode: "Đà Nẵng",
+  priceRange: "3m-5m",
+  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/19/img-1001_1746776401.jpg",
+  detailsUrl: "chitiet-danang-sontra.html"
+}
 ];
 
-// 2. Tham chiếu đến các phần tử DOM
+
 const container = document.getElementById('listing-container');
 const priceFilter = document.getElementById('price-filter');
 const sortBy = document.getElementById('sort-by');
 
-// 3. Hàm định dạng giá tiền (ví dụ: 2500000 -> 2.500.000)
+
 function formatCurrency(amount) {
     return new Intl.NumberFormat('vi-VN').format(amount);
 }
 
-// 4. Hàm tạo HTML cho 1 tin trọ (Card)
+
 function createListingCard(listing) {
     const formattedPrice = formatCurrency(listing.price);
     
@@ -89,17 +140,15 @@ function createListingCard(listing) {
     `;
 }
 
-// 5. Hàm chính để thực hiện LỌC, SẮP XẾP và RENDER
+
 function renderListings() {
-    let currentListings = [...listingsData]; // Bắt đầu với bản sao của dữ liệu gốc
+    let currentListings = [...listingsData];
 
-    // --- LẤY THAM SỐ LỌC BAN ĐẦU TỪ URL ---
+
     const urlParams = new URLSearchParams(window.location.search);
-    const urlCity = urlParams.get('city'); // Lấy giá trị của tham số 'city'
+    const urlCity = urlParams.get('city'); 
 
-    // LỌC 1: LỌC THEO THÀNH PHỐ TỪ URL (nếu có)
     if (urlCity && urlCity !== 'Chọn Tỉnh/Thành phố') { 
-        // Lọc danh sách theo cityCode (đã được chuẩn hóa để khớp với giá trị <option>)
         currentListings = currentListings.filter(listing => listing.cityCode === urlCity);
         
         // Cập nhật tiêu đề trang để người dùng biết họ đang xem gì
@@ -108,7 +157,7 @@ function renderListings() {
             header.textContent = `Phòng Trọ tại ${urlCity}`;
         }
     } else {
-        // Đảm bảo tiêu đề trang trở về mặc định nếu không có tham số
+       
         const header = document.querySelector('h1');
          if (header && header.textContent !== 'Tìm Kiếm Phòng Trọ Phù Hợp') {
             header.textContent = 'Tất Cả Phòng Trọ';
@@ -116,7 +165,7 @@ function renderListings() {
     }
 
 
-    // LỌC 2: LỌC THEO MỨC GIÁ (từ control trên trang listings)
+  
     const selectedPriceRange = priceFilter.value;
     if (selectedPriceRange !== 'all') {
         currentListings = currentListings.filter(listing => listing.priceRange === selectedPriceRange);
@@ -135,16 +184,15 @@ function renderListings() {
         const html = currentListings.map(createListingCard).join('');
         container.innerHTML = html;
     } else {
-        // Hiển thị thông báo khi không tìm thấy kết quả
+        
         const cityDisplay = urlCity && urlCity !== 'Chọn Tỉnh/Thành phố' ? ` tại ${urlCity}` : '';
         container.innerHTML = `<p class="text-center col-span-full text-gray-600 p-8">Không tìm thấy phòng trọ nào phù hợp${cityDisplay} với tiêu chí lọc.</p>`;
     }
 }
 
-// 6. Thêm sự kiện lắng nghe (Event Listeners)
-// Khi người dùng thay đổi bộ lọc hoặc tùy chọn sắp xếp, gọi hàm renderListings
+
 priceFilter.addEventListener('change', renderListings);
 sortBy.addEventListener('change', renderListings);
 
-// 7. Tải và hiển thị danh sách lần đầu khi trang tải xong
+
 document.addEventListener('DOMContentLoaded', renderListings);
