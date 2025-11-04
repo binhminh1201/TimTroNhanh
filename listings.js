@@ -9,7 +9,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://congchungnguyenhue.com/Uploaded/Images/Original/2024/01/16/chinh-chu-cho-thue-phong-tro-khep-kin-tai-ngo-44-tran-thai-tong-cau-giay-phong-tang-2-va-tang-3-dep_1601213519.jpg",
         detailsUrl: "details-1.html"
-    }, // <--- ĐÃ THÊM DẤU PHẨY
+    },
     {
         id: 2,
         title: "Căn hộ mini Quận 1 đầy đủ NT (HCM)",
@@ -20,7 +20,7 @@ const listingsData = [
         priceRange: "3m-5m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/09/img-0602_1746775446.jpg",
         detailsUrl: "details-2.html"
-    }, // <--- ĐÃ THÊM DẤU PHẨY
+    },
     {
         id: 3,
         title: "Phòng trọ giá rẻ gần ĐH Bách Khoa (HN)",
@@ -31,7 +31,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://cdnnews.mogi.vn/news/wp-content/uploads/2023/04/10134340/phong-tro-quan-10-4.jpg",
         detailsUrl: "details-3.html"
-    }, // <--- ĐÃ THÊM DẤU PHẨY
+    },
     {
         id: 4,
         title: "Studio cao cấp Cầu Giấy (HN)",
@@ -42,7 +42,7 @@ const listingsData = [
         priceRange: "5m+",
         imageUrl: "https://cdn.thehappystay.vn/thumb_xx368/upload/2019/09/22/can-ho-studio-cao-cap-tai-trung-hoa-cau-giay644.jpg",
         detailsUrl: "details-4.html"
-    }, // <--- ĐÃ THÊM DẤU PHẨY
+    },
     {
         id: 5,
         title: "Phòng trọ sinh viên Ngũ Hành Sơn (Đà Nẵng)",
@@ -53,62 +53,62 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/10/01/anh-pt5_1727753277.jpg",
         detailsUrl: "details-5.html"
-    }, // <--- ĐÃ THÊM DẤU PHẨY
+    }, 
   {
-  id: 6,
-  title: "Studio full nội thất, mới tinh, Chùa Láng",
-  price: 4200000,
-  area: 30,
-  location: "Chùa Láng, Quận Đống Đa, Hà Nội",
-  cityCode: "Hà Nội",
-  priceRange: "3m-5m",
-  imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
-  detailsUrl: "details-6.html"
-}, // <--- ĐÃ THÊM DẤU PHẨY
-{
-  id: 7,
-  title: "Cho thuê căn 1N1K Time City, full đồ đẹp",
-  price: 9500000,
-  area: 53,
-  location: "KĐT Time City, Quận Hai Bà Trưng, Hà Nội",
-  cityCode: "Hà Nội",
-  priceRange: "7m-10m",
-  imageUrl: "https://file4.batdongsan.com.vn/resize/1275x717/2025/08/05/20250805104920-a2c0_wm.jpg",
-  detailsUrl: "details-7.html"
-}, // <--- ĐÃ THÊM DẤU PHẨY
-{
-  id: 8,
-  title: "Căn hộ dịch vụ 1PN Tây Hồ, view hồ",
-  price: 8000000,
-  area: 45,
-  location: "Quảng An, Quận Tây Hồ, Hà Nội",
-  cityCode: "Hà Nội",
-  priceRange: "7m-10m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
-  detailsUrl: "details-8.html"
-}, // <--- ĐÃ THÊM DẤU PHẨY (ĐÂY LÀ LỖI CHÍNH)
-{
-  id: 9,
-  title: "Phòng trọ SV Gò Vấp, có gác, gần ĐH Công Nghiệp",
-  price: 2500000,
-  area: 20,
-  location: "Nguyễn Văn Lượng, Quận Gò Vấp, TP. HCM",
-  cityCode: "TP. Hồ Chí Minh",
-  priceRange: "1m-3m",
-  imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-  detailsUrl: "details-9.html"
-}, // <--- ĐÃ THÊM DẤU PHẨY
-{
-  id: 10,
-  title: "Căn hộ studio Sơn Trà, đi bộ ra biển",
-  price: 4500000,
-  area: 35,
-  location: "An Hải Bắc, Quận Sơn Trà, Đà Nẵng",
-  cityCode: "Đà Nẵng",
-  priceRange: "3m-5m",
-  imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/11/02/143/f4a9b13012104ac7a34744910101c41d.jpg",
-  detailsUrl: "details-10.html"
-}
+    id: 6,
+    title: "Studio full nội thất, mới tinh, Chùa Láng",
+    price: 4200000,
+    area: 30,
+    location: "Chùa Láng, Quận Đống Đa, Hà Nội",
+    cityCode: "Hà Nội",
+    priceRange: "3m-5m",
+    imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
+    detailsUrl: "details-6.html"
+  },
+  {
+    id: 7,
+    title: "Cho thuê căn 1N1K Time City, full đồ đẹp",
+    price: 9500000,
+    area: 53,
+    location: "KĐT Time City, Quận Hai Bà Trưng, Hà Nội",
+    cityCode: "Hà Nội",
+    priceRange: "7m-10m",
+    imageUrl: "https://file4.batdongsan.com.vn/resize/1275x717/2025/08/05/20250805104920-a2c0_wm.jpg",
+    detailsUrl: "details-7.html"
+  },
+  {
+    id: 8,
+    title: "Căn hộ dịch vụ 1PN Tây Hồ, view hồ",
+    price: 8000000,
+    area: 45,
+    location: "Quảng An, Quận Tây Hồ, Hà Nội",
+    cityCode: "Hà Nội",
+    priceRange: "7m-10m",
+    imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
+    detailsUrl: "details-8.html"
+  },
+  {
+    id: 9,
+    title: "Phòng trọ SV Gò Vấp, có gác, gần ĐH Công Nghiệp",
+    price: 2500000,
+    area: 20,
+    location: "Nguyễn Văn Lượng, Quận Gò Vấp, TP. HCM",
+    cityCode: "TP. Hồ Chí Minh",
+    priceRange: "1m-3m",
+    imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
+    detailsUrl: "details-9.html"
+  },
+  {
+    id: 10,
+    title: "Căn hộ studio Sơn Trà, đi bộ ra biển",
+    price: 4500000,
+    area: 35,
+    location: "An Hải Bắc, Quận Sơn Trà, Đà Nẵng",
+    cityCode: "Đà Nẵng",
+    priceRange: "3m-5m",
+    imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/11/02/143/f4a9b13012104ac7a34744910101c41d.jpg",
+    detailsUrl: "details-10.html"
+  }
 ];
 
 // 2. Tham chiếu đến các phần tử DOM
@@ -126,7 +126,7 @@ function createListingCard(listing) {
     const formattedPrice = formatCurrency(listing.price);
     
     return `
-        <div class="bg-white rounded-lg shadow overflow-hidden h-full"> 
+        <div class="bg-white rounded-lg shadow overflow-hidden h-full">
             <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
@@ -164,6 +164,7 @@ function renderListings() {
             header.textContent = 'Tất Cả Phòng Trọ';
         }
     }
+
 
     // LỌC 2: LỌC THEO MỨC GIÁ (từ control trên trang listings)
     const selectedPriceRange = priceFilter.value;
