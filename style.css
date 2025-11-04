@@ -212,9 +212,9 @@ body {
     .md\:mb-0 { margin-bottom: 0; } 
 }
 
-/* 12. Responsive (lg:) */
+
 @media (min-width: 1024px) {
-    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* 13. Owl Selectors (space-x, space-y) */
@@ -237,7 +237,5 @@ select.border {
 /* 6. Typography */
 .font-logo { 
     font-family: 'Pacifico', cursive; 
-    /* Có thể điều chỉnh kích thước hoặc trọng lượng nếu cần, 
-       nhưng font Pacifico thường trông đẹp nhất với kích thước lớn và trọng lượng mặc định */
+ 
 }
-/* ... (các class Typography khác) ... */
