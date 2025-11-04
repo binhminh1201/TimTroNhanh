@@ -53,7 +53,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/10/01/anh-pt5_1727753277.jpg",
         detailsUrl: "details-5.html"
-    }, 
+    }, 
   {
   id: 6,
   title: "Studio full nội thất, mới tinh, Chùa Láng",
@@ -96,7 +96,7 @@ const listingsData = [
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-  detailsUrl: "details-9.html"
+D  detailsUrl: "details-9.html"
 },
 {
   id: 10,
@@ -109,8 +109,6 @@ const listingsData = [
   imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/11/02/143/f4a9b13012104ac7a34744910101c41d.jpg",
   detailsUrl: "details-10.html"
 }
-
-
 ];
 
 // 2. Tham chiếu đến các phần tử DOM
@@ -123,12 +121,12 @@ function formatCurrency(amount) {
     return new Intl.NumberFormat('vi-VN').format(amount);
 }
 
-
+// 4. Hàm tạo HTML cho một thẻ tin đăng
 function createListingCard(listing) {
     const formattedPrice = formatCurrency(listing.price);
     
     return `
-        <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="bg-white rounded-lg shadow overflow-hidden h-full"> 
             <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
@@ -141,7 +139,7 @@ function createListingCard(listing) {
     `;
 }
 
-
+// 5. Hàm chính để lọc, sắp xếp và hiển thị
 function renderListings() {
     let currentListings = [...listingsData]; // Bắt đầu với bản sao của dữ liệu gốc
 
@@ -193,8 +191,9 @@ function renderListings() {
     }
 }
 
-
+// 6. Gán sự kiện
 priceFilter.addEventListener('change', renderListings);
 sortBy.addEventListener('change', renderListings);
 
+// 7. Chạy lần đầu khi tải trang
 document.addEventListener('DOMContentLoaded', renderListings);
