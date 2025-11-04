@@ -83,7 +83,7 @@ const listingsData = [
   area: 45,
   location: "Quảng An, Quận Tây Hồ, Hà Nội",
   cityCode: "Hà Nội",
-_priceRange: "7m-10m",
+  priceRange: "7m-10m", // <-- ĐÃ SỬA TỪ _priceRange
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
   detailsUrl: "details-8.html"
 },
@@ -96,7 +96,7 @@ _priceRange: "7m-10m",
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-  detailsUrl: "details-9.html" // <--- TÔI ĐÃ XÓA CHỮ "D" Ở ĐÂY
+  detailsUrl: "details-9.html" // <-- ĐÃ SỬA LỖI CHỮ "D"
 },
 {
   id: 10,
@@ -126,17 +126,18 @@ function createListingCard(listing) {
     const formattedPrice = formatCurrency(listing.price);
     
     return `
-        <div class="bg-white rounded-lg shadow overflow-hidden h-full">             <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
+        <div class="bg-white rounded-lg shadow overflow-hidden h-full"> 
+            <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
             <div class="p-4">
-  M             <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
+                <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
                 <p class="text-red-600 font-bold mb-2">${formattedPrice} đ/tháng</p>
                 <p class="text-gray-600 text-sm mb-1">Diện tích: ${listing.area} m²</p>
-nbsp;               <p class="text-gray-600 text-sm">Địa chỉ: ${listing.location}</p>
+                <p class="text-gray-600 text-sm">Địa chỉ: ${listing.location}</p>
                 <a href="${listing.detailsUrl}" class="inline-block mt-3 text-indigo-600 hover:underline text-sm">Xem chi tiết &rarr;</a>
             </div>
         </div>
     `;
-}
+} // <-- ĐÃ XÓA CÁC KÝ TỰ RÁC "M" VÀ "nbsp;" TỪ ĐÂY
 
 // 5. Hàm chính để lọc, sắp xếp và hiển thị
 function renderListings() {
@@ -160,10 +161,9 @@ function renderListings() {
         // Đảm bảo tiêu đề trang trở về mặc định nếu không có tham số
         const header = document.querySelector('h1');
          if (header && header.textContent !== 'Tìm Kiếm Phòng Trọ Phù Hợp') {
-Source             header.textContent = 'Tất Cả Phòng Trọ';
+            header.textContent = 'Tất Cả Phòng Trọ'; // <-- ĐÃ XÓA CHỮ "Source" TỪ DÒNG NÀY
         }
     }
-
 
     // LỌC 2: LỌC THEO MỨC GIÁ (từ control trên trang listings)
     const selectedPriceRange = priceFilter.value;
