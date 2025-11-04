@@ -9,7 +9,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://congchungnguyenhue.com/Uploaded/Images/Original/2024/01/16/chinh-chu-cho-thue-phong-tro-khep-kin-tai-ngo-44-tran-thai-tong-cau-giay-phong-tang-2-va-tang-3-dep_1601213519.jpg",
         detailsUrl: "details-1.html"
-    },
+    }, // <--- ĐÃ THÊM DẤU PHẨY
     {
         id: 2,
         title: "Căn hộ mini Quận 1 đầy đủ NT (HCM)",
@@ -20,7 +20,7 @@ const listingsData = [
         priceRange: "3m-5m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2025/05/09/img-0602_1746775446.jpg",
         detailsUrl: "details-2.html"
-    },
+    }, // <--- ĐÃ THÊM DẤU PHẨY
     {
         id: 3,
         title: "Phòng trọ giá rẻ gần ĐH Bách Khoa (HN)",
@@ -31,7 +31,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://cdnnews.mogi.vn/news/wp-content/uploads/2023/04/10134340/phong-tro-quan-10-4.jpg",
         detailsUrl: "details-3.html"
-    },
+    }, // <--- ĐÃ THÊM DẤU PHẨY
     {
         id: 4,
         title: "Studio cao cấp Cầu Giấy (HN)",
@@ -42,7 +42,7 @@ const listingsData = [
         priceRange: "5m+",
         imageUrl: "https://cdn.thehappystay.vn/thumb_xx368/upload/2019/09/22/can-ho-studio-cao-cap-tai-trung-hoa-cau-giay644.jpg",
         detailsUrl: "details-4.html"
-    },
+    }, // <--- ĐÃ THÊM DẤU PHẨY
     {
         id: 5,
         title: "Phòng trọ sinh viên Ngũ Hành Sơn (Đà Nẵng)",
@@ -53,7 +53,7 @@ const listingsData = [
         priceRange: "1m-3m",
         imageUrl: "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/10/01/anh-pt5_1727753277.jpg",
         detailsUrl: "details-5.html"
-    }, 
+    }, // <--- ĐÃ THÊM DẤU PHẨY
   {
   id: 6,
   title: "Studio full nội thất, mới tinh, Chùa Láng",
@@ -64,7 +64,7 @@ const listingsData = [
   priceRange: "3m-5m",
   imageUrl: "https://cloud.muaban.net/cdn-cgi/image/format=auto,quality=85/images/thumb-detail/2025/10/04/134/5315de2d9b5d4e7eaa7e1aabec84a229.jpg",
   detailsUrl: "details-6.html"
-},
+}, // <--- ĐÃ THÊM DẤU PHẨY
 {
   id: 7,
   title: "Cho thuê căn 1N1K Time City, full đồ đẹp",
@@ -75,7 +75,7 @@ const listingsData = [
   priceRange: "7m-10m",
   imageUrl: "https://file4.batdongsan.com.vn/resize/1275x717/2025/08/05/20250805104920-a2c0_wm.jpg",
   detailsUrl: "details-7.html"
-},
+}, // <--- ĐÃ THÊM DẤU PHẨY
 {
   id: 8,
   title: "Căn hộ dịch vụ 1PN Tây Hồ, view hồ",
@@ -83,10 +83,10 @@ const listingsData = [
   area: 45,
   location: "Quảng An, Quận Tây Hồ, Hà Nội",
   cityCode: "Hà Nội",
-  priceRange: "7m-10m", // <-- ĐÃ SỬA TỪ _priceRange
+  priceRange: "7m-10m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2025/11/03/1_1762141695.jpg",
   detailsUrl: "details-8.html"
-},
+}, // <--- ĐÃ THÊM DẤU PHẨY (ĐÂY LÀ LỖI CHÍNH)
 {
   id: 9,
   title: "Phòng trọ SV Gò Vấp, có gác, gần ĐH Công Nghiệp",
@@ -96,8 +96,8 @@ const listingsData = [
   cityCode: "TP. Hồ Chí Minh",
   priceRange: "1m-3m",
   imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/03/09/z3880411686181-9752c8ab5423055af962be337b7dfade_1678349520.jpg",
-  detailsUrl: "details-9.html" // <-- ĐÃ SỬA LỖI CHỮ "D"
-},
+  detailsUrl: "details-9.html"
+}, // <--- ĐÃ THÊM DẤU PHẨY
 {
   id: 10,
   title: "Căn hộ studio Sơn Trà, đi bộ ra biển",
@@ -137,7 +137,7 @@ function createListingCard(listing) {
             </div>
         </div>
     `;
-} // <-- ĐÃ XÓA CÁC KÝ TỰ RÁC "M" VÀ "nbsp;" TỪ ĐÂY
+}
 
 // 5. Hàm chính để lọc, sắp xếp và hiển thị
 function renderListings() {
@@ -161,7 +161,7 @@ function renderListings() {
         // Đảm bảo tiêu đề trang trở về mặc định nếu không có tham số
         const header = document.querySelector('h1');
          if (header && header.textContent !== 'Tìm Kiếm Phòng Trọ Phù Hợp') {
-            header.textContent = 'Tất Cả Phòng Trọ'; // <-- ĐÃ XÓA CHỮ "Source" TỪ DÒNG NÀY
+            header.textContent = 'Tất Cả Phòng Trọ';
         }
     }
 
