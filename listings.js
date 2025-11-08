@@ -84,7 +84,7 @@ const listingsData = [
     location: "Quảng An, Quận Tây Hồ, Hà Nội",
     cityCode: "Hà Nội",
     priceRange: "7m-10m",
-    imageUrl: "https://thuviennhadat.vn/cho-thue-chung-cu-mini-can-ho-dich-vu-phuong-buoi/cho-thue-can-ho-dich-vu-1pn-trich-sai-tay-ho-full-do-vip-ngo-rong-view-toan-mat-ho-tay-chi-12tr-pst104302.html",
+    imageUrl: "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2023/04/20/7d4a0e59-8823-4a88-a3a7-db711884f5ec_1681965870.jpg",
     detailsUrl: "details-8.html"
   },
   {
