@@ -149,18 +149,18 @@ function createListingCard(listing) {
 
 // 5. Hàm chính để lọc, sắp xếp và hiển thị
 function renderListings() {
-    let currentListings = [...listingsData]; // Bắt đầu với bản sao của dữ liệu gốc
+    let currentListings = [...listingsData]; 
 
     // --- LẤY THAM SỐ LỌC BAN ĐẦU TỪ URL ---
     const urlParams = new URLSearchParams(window.location.search);
-    const urlCity = urlParams.get('city'); // Lấy giá trị của tham số 'city'
+    const urlCity = urlParams.get('city'); 
 
     // LỌC 1: LỌC THEO THÀNH PHỐ TỪ URL (nếu có)
     if (urlCity && urlCity !== 'Chọn Tỉnh/Thành phố') { 
-        // Lọc danh sách theo cityCode (đã được chuẩn hóa để khớp với giá trị <option>)
+       
         currentListings = currentListings.filter(listing => listing.cityCode === urlCity);
         
-        // Cập nhật tiêu đề trang để người dùng biết họ đang xem gì
+      
         const header = document.querySelector('h1');
         if (header) {
             header.textContent = `Phòng Trọ tại ${urlCity}`;
