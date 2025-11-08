@@ -116,35 +116,36 @@ const container = document.getElementById('listing-container');
 const priceFilter = document.getElementById('price-filter');
 const sortBy = document.getElementById('sort-by');
 
-// 3. Hàm định dạng giá tiền (ví dụ: 2500000 -> 2.500.000)
+// 3. Hàm định dạng giá tiền 
 function formatCurrency(amount) {
     return new Intl.NumberFormat('vi-VN').format(amount);
 }
 
 
-// 4. Hàm tạo HTML cho một thẻ tin đăng (ĐÃ SỬA)
+// 4. Hàm tạo HTML cho một thẻ tin đăng 
 function createListingCard(listing) {
-    const formattedPrice = formatCurrency(listing.price);
-    
-    return `
-                <div class="bg-white rounded-lg shadow overflow-hidden h-full flex flex-col">
-                        <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
-            
-                        <div class="p-4 flex-grow">
-                <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
-                <p class="text-red-600 font-bold mb-2">${formattedPrice} đ/tháng</p>
-                <p class="text-gray-600 text-sm mb-1">Diện tích: ${listing.area} m²</p>
-                <p class="text-gray-600 text-sm">Địa chỉ: ${listing.location}</p>
-            </div>
+    const formattedPrice = formatCurrency(listing.price);
+    
+    return `
+        <div class="bg-white rounded-lg shadow overflow-hidden h-full flex flex-col 
+                    transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            
+            <img src="${listing.imageUrl}" alt="${listing.title}" class="w-full h-48 object-cover">
+            
+            <div class="p-4 flex-grow">
+                <h3 class="font-semibold text-lg mb-1 text-indigo-700">${listing.title}</h3>
+                <p class="text-red-600 font-bold mb-2">${formattedPrice} đ/tháng</p>
+                <p class="text-gray-600 text-sm mb-1">Diện tích: ${listing.area} m²</p>
+                <p class="text-gray-600 text-sm">Địa chỉ: ${listing.location}</p>
+            </div>
 
             <div class="p-4 pt-0">
                 <a href="${listing.detailsUrl}" class="inline-block mt-3 text-indigo-600 hover:underline text-sm">Xem chi tiết &rarr;</a>
             </div>
-        </div>
-    `;
+        </div>
+    `;
 }
 
-// ... (code hàm renderListings, ... giữ nguyên)
 
 // 5. Hàm chính để lọc, sắp xếp và hiển thị
 function renderListings() {
